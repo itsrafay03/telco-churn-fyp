@@ -48,31 +48,22 @@ if model is None:
 # Sidebar input 
 input_df = render_sidebar()
 
-# ---------------------------------------------------------
-# LOGIC & CONTROL FLOW
-# ---------------------------------------------------------
-
 # 1. Initialize the "Active" State
 # We use this to determine if the dashboard should be visible.
 if 'analysis_active' not in st.session_state:
     st.session_state['analysis_active'] = False
 
-# 2. The Button triggers the activation
-# When clicked, it turns the dashboard ON.
+# 2. The Button triggers the activation when clicked, it turns the dashboard ON.
 if st.sidebar.button("🚀 Predict Churn Risk", type="primary"):
     st.session_state['analysis_active'] = True
 
 # 3. Main Dashboard Rendering
-# This block runs only if the button has been pressed at least once.
-# Because it is outside the button's 'if' block, it reruns on every sidebar change.
+# This block runs only if the button has been pressed at least once. Because it is outside the button 'if' block, it reruns on every sidebar change.
 if st.session_state['analysis_active']:
-    
-    # --- Live Prediction ---
-    # We calculate this every time the script reruns (i.e., when you change a slider)
+    # We calculate this every time the script reruns
     engineered_df = engineer_features(input_df)
     prob, prediction = make_prediction(model, preprocessor, selected_features, threshold, engineered_df)
     
-    # --- Dashboard Visuals ---
     render_result_card(prob, prediction)
     st.divider()
 
@@ -101,9 +92,8 @@ else:
     # This shows when the app loads or before the button is pressed
     st.info("👈 Please adjust the customer profile in the sidebar and click 'Predict Churn Risk' to generate the live dashboard.")
 
-# ---------------------------------------------------------
 # 6. General Dataset Analysis
-# ---------------------------------------------------------
+
 st.divider()
 st.subheader("4. DataSet Analysis")
 st.write("Explore trends across the entire customer database to identify churn patterns.")
