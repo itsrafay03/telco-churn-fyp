@@ -9,6 +9,7 @@ An end-to-end Machine Learning solution designed to predict customer churn in th
 ## 🎓 Supervision / Course Context
 
 This project was developed as a Final Year Project requirement for the **BS Computer Science (2022-2026)**.
+
 **Supervisor:** Dr. Omer Ajmal (Lecturer, Department of Computer Science, The Islamia University of Bahawalpur).
 
 ---
@@ -37,8 +38,8 @@ Customer churn is a critical challenge where users stop doing business with a co
 The project follows a rigorous Data Science lifecycle:
 
 1. **Data Acquisition & Engineering:** Sourced and cleaned the Kaggle dataset, handled missing values, scaled features, and applied **SMOTE** to balance the data and prevent overfitting.
-2. Experimental Phase (Google Colab):\*\* Evaluated ten distinct classification models including Logistic Regression, SVC, KNN, XGBoost, and Gradient Boost.
-3. Model Selection:** Identified **Random Forest\*\* as the optimal performer based on Accuracy, F1-Score, and ROC-AUC metrics.
+2. **Experimental Phase (Google Colab):** Evaluated ten distinct classification models including Logistic Regression, SVC, KNN, XGBoost, and Gradient Boost.
+3. **Model Selection:** Identified **Random Forest** as the optimal performer based on Accuracy, F1-Score, and ROC-AUC metrics.
 4. **Refinement (VS Code):** Transitioned to a local environment for final parameter tuning, feature scaling, and Streamlit development.
 5. **Deployment:** Integrated version control via GitHub and hosted the live app on Streamlit Cloud.
 
@@ -64,3 +65,21 @@ The project follows a rigorous Data Science lifecycle:
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 ```
+
+---
+
+## 🤝 Contributing & Support
+
+Feel free to check the [issues page](https://github.com/itsrafay03/telco-churn-fyp/issues) if you have any suggestions or want to contribute to this project. If you found this project helpful, please consider giving it a ⭐!
+
+## 📩 Contact Me
+
+I am always open to discussing machine learning projects, web development, or potential collaborations. Let's connect!
+
+- **Muhammad Rafay**
+- **Email:** itsrafay03@gmail.com
+- **GitHub:** [@itsrafay03](https://github.com/itsrafay03)
+
+---
+
+_Developed with ❤️ as part of my Final Year Project at IUB._
